@@ -34,7 +34,6 @@
         } else {
             $vehicles = get_all_vehicles($sort);
         }
-        // use in drop menus 
         $types = get_types();
         $classes = get_classes();
         $makes = get_makes();
@@ -55,7 +54,7 @@
             include('errors/error.php');
         } else {
             delete_vehicle($vehicle_id);
-            header("Location: zua-admin.php"); //Zippys Back End page
+            header("Location: zua-admin.php");
         }
     } else if ($action == 'delete_type') {
         $type_id = filter_input(INPUT_POST, 'type_id', FILTER_VALIDATE_INT);
